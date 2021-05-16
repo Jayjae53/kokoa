@@ -102,6 +102,7 @@
 .open-post__heart-count:hover i {
   /* 오픈포스트허트카운트가 호버일 때 아이콘이 바뀌는 걸 원합니다 */
   will-change: transform;
-  /* 브라우저에게 transform의 형태로 애니메이션 적용할테니 당황하지말라고 알려주는것임  */
+  /* 브라우저에게 transform의 형태로 애니메이션 적용할테니 당황하지말라고 알려주는것임 
+  버벅거리는곳에 사용 . 그래픽카드를 이용해 에니메이션 가속화*/
   animation: heartBeat 1s ease-in-out;
 }
