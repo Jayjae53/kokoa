@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap");
+@import "reset.css";
+/* 모든건 css가 있는 파일 기준이므로
+이 style파일과 같은 위치에 있는곳은 부모 주솔르  적어주지 않아도 괜찮다
+ */
+@import "component/status-bar.css";
+@import "valuables.css";
+/* 노서비스랑 와이파이 거리를 띄워줌 */
+@import "screens/login.css";
+@import "component/nav-bar.css";
+@import "component/screen-header.css";
+@import "component/alt-screen-header.css";
+@import "screens/friends.css";
+@import "component/user-components.css";
+@import "component/badge.css";
+@import "component/point.css";
+@import "screens/find.css";
+@import "component/icon-raw.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+@import "component/no-mobile.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 1000vh;
+  color: #2e636e;
+}
+
+/* style.css 파일에는 font family처럼 모든 스크린에 적용될 수 있는 
+스타일을 적는게 니코스타일 */
+/*
+****************************************************************
+여기서 파일을 링크할 때 생겼던 문제점이 screen, componnent 폴뎌를
+만들어서 css 파일을 옮긴다음 import의 주소를 바꿔주기 위해서
+login.css -> screens/login.css로 바꿔적었는데도 계속 안됐음
+해결법은 저게바뀔때 마우스로 링크를 시켜줘야함
+*/
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}

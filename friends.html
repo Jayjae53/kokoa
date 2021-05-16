@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friend - screen</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <i class="fas fa-wifi"></i>
+        <span>no service</span>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>11%</span>
+        <i class="fas fa-battery-three-quarters fa-2x"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="screen-header">
+      <h1 class="screen-header__titles">Friends</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span><i class="fas fa-cog fa-lg"></i></span>
+      </div>
+    </header>
+
+    <a href="#" id="friends-display-link">
+      <i class="fas fa-info"></i>Friends'Names Display<i
+        class="fas fa-chevron-right fa-sm"
+      ></i>
+    </a>
+
+    <main class="friends-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="KakaoTalk_20210515_045858438.jpg"
+            class="user-component__avatar user-component__avatar--xl"
+            alt=""
+          />
+          <!-- 모더파이하는 법 .  user-component__avatar--xl 기존 클래스명의 커저라버전의 클래스를 만들어주기       -->
+          <div class="user-component__text">
+            <h4 class="user-component__title">dongjae</h4>
+            <!-- <h6 class="user-component__subtitle">인생,,</h6> -->
+          </div>
+        </div>
+        <div class="user-component__column"></div>
+      </div>
+
+      <!-- 다른부분^^^^^^^^^^^^^^^^^^^^^^^^^^^^다른부분^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+      <div class="frineds-screen__channel">
+        <div class="friends-screen__channel-header">
+          <span>Channel</span>
+          <i class="fas fa-chevron-up fa-sm"></i>
+        </div>
+      </div>
+      <!-- 다른부분^^^^^^^^^^^^^^^^^^^^^^^^^^^^다른부분^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="KakaoTalk_20210515_045858438.jpg"
+            class="user-component__avatar user-component__avatar--xl"
+            alt=""
+          />
+          <!-- 모더파이하는 법 .  user-component__avatar--xl 기존 클래스명의 커저라버전의 클래스를 만들어주기       -->
+          <div class="user-component__text">
+            <h4 class="user-component__title">Channel</h4>
+            <!-- <h6 class="user-component__subtitle">인생,,</h6> -->
+          </div>
+        </div>
+        <div class="user-component__column">
+          <div>2 <i class="fas fa-chevron-right fa-sm"></i></div>
+          <!-- !!!!!!!!!!!!!!!!!!!!!!!!
+          2 <i class="fas fa-chevron-right fa-sm"></i> 이렇게 바꾸면 
+          user-component__column에 부여된 flex-> flex-direction: column;
+          효과에 의해서 2와 <i> 각각의 엘리먼트이기 떄문에 세로로 배열된다
+            그걸 해결해주려고 div로 감싸서 하나의 엘리먼드로 바꾸어준것.
+            즉 훼이크
+          -->
+        </div>
+      </div>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="fas fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notificiation badge">1</span>
+            <i class="far fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fas fa-search fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html"
+            ><span class="ellipsis__notification"></span>
+            <i class="fas fa-ellipsis-h fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="splash-screen">
+      <i class="fas fa-comment fa-2x"></i>
+    </div>
+    <div id="no-mobile">
+      <span>Your screen it Supuedfasdsr big</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

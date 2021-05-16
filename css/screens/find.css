@@ -1,0 +1,107 @@
+.recommended-friends {
+  border-top: var(--main-border);
+  padding-top: 20px;
+  border-bottom: var(--main-border);
+  margin-bottom: 20px;
+}
+.recommended-title {
+  font-size: 16px;
+  color: var(--color-gray);
+}
+.recommended-friends span {
+  display: block;
+  text-align: center;
+  margin: 100px 0px;
+  font-size: 20px;
+  color: var(--color-gray);
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+.open-chat__header span {
+  opacity: 0.6;
+}
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.open-post__title {
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+.open-post__hashtags {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.open-post__members {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+.open-post__members img {
+  width: 18x;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.open-post__member-count {
+  opacity: 0.5;
+  font-size: 14px;
+}
+.open-post__members .divider {
+  width: 2px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0px 5px;
+}
+.open-post__member-status {
+  color: pink;
+}
+.open-post__photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}
+.open-post__photo {
+  position: relative;
+}
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 12px;
+}
+.open-post__heart-count span {
+  margin-left: 3px;
+}
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(2);
+    /* 사이즈가 작을수록 움직임이 시ㅏㅇ함 */
+  }
+  100% {
+    color: white;
+  }
+}
+.open-post__heart-count:hover i {
+  /* 오픈포스트허트카운트가 호버일 때 아이콘이 바뀌는 걸 원합니다 */
+  will-change: transform;
+  /* 브라우저에게 transform의 형태로 애니메이션 적용할테니 당황하지말라고 알려주는것임  */
+  animation: heartBeat 1s ease-in-out;
+}

@@ -1,0 +1,37 @@
+.more-screen .icon-row {
+  margin-top: 35px;
+}
+.more-suggestion {
+  margin-top: 15px;
+  border-top: var(--main-border);
+  padding-top: 40px;
+}
+.more-suggestion__title {
+  margin-bottom: 30px;
+}
+.more-suggestion__icons {
+  display: flex;
+}
+.more-suggestion__icon {
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.more-suggestion__icon-image {
+  width: 60px;
+  height: 60px;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  /*  아이콘이 들어있는
+  컨테이너 박스의가로세로 60 60크기를 만들어줬기에 영역이 생겼고
+ 그 중앙에 아이콘을 넣는것 */
+}
+.more-suggestion__icon-image i {
+  font-size: 30px;
+  color: white;
+}

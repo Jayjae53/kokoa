@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friend - screen</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <i class="fas fa-wifi"></i>
+        <span>no service</span>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>11%</span>
+        <i class="fas fa-battery-three-quarters fa-2x"></i>
+
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="screen-header">
+      <h1 class="screen-header__titles">More</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i> </span>
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span> <a href="settings.html"><i class="fas fa-cog fa-lg"></i> </a>
+          <div class="red-point"></div
+        ></span>
+      </div>
+    </header>
+    <main class="main-screen more-screen">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            src="KakaoTalk_20210515_045858438.jpg"
+            class="user-component__avatar user-component__avatar--xl"
+            alt=""
+          />
+          <!-- 모더파이하는 법 .  user-component__avatar--xl 기존 클래스명의 커저라버전의 클래스를 만들어주기       -->
+          <div class="user-component__text">
+            <h4 class="user-component__title">dongjae</h4>
+            <div class="user-component__number">
+              <h6 class="user-component__subtitle">+05004106</h6>
+              <span> <i class="fas fa-info-circle"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <i class="far fa-comment-alt fa-2x"></i>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="far fa-calendar-check"></i><span>Calendar</span>
+        </div>
+        <div class="icon-row__icon">
+            <i class="fas fa-surprise"></i></i><span>Emotions</span>
+        </div>
+        <div class="icon-row__icon">
+            <i class="fas fa-paint-roller"></i></i><span>Themes</span>
+        </div>
+        <div class="icon-row__icon">
+            <i class="fas fa-file-invoice-dollar"></i></i><span>Account</span>
+        </div>
+        <!-- 아이콘과 텍스트가 있을 때 텍스트는 따로 span에 넣어주는게 컨트롤하기 좋음
+         -->
+      </div>
+
+
+
+      <div class="more-suggestion">
+        <h4 class="more-suggestion__title">Suggestion</h4>
+        <div class="more-suggestion__icons">
+            <div class="more-suggestion__icon">
+                <div class="more-suggestion__icon-image">
+
+                    <i class="fas fa-quote-right"></i>
+                   
+                </div>
+                <span class="more-suggestion__icon-text" >Kakao story</span>
+            </div>
+            <div class="more-suggestion__icon">
+                <div class="more-suggestion__icon-image">
+
+                    <i class="fas fa-quote-right"></i>
+                   
+
+                </div>
+                <span class="more-suggestion__icon-text" >Kakao story</span>
+            </div>
+        
+        </div>
+      </div>
+
+
+
+
+    </main>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="far fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notificiation"></span>
+            <i class="far fa-comment fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fas fa-search fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html"
+            ><span class="ellipsis__notification"></span>
+            <i class="fas fa-ellipsis-h fa-2x"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="no-mobile">
+
+        <span>Your screen it too big</span>
+      </div>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  /* 디스플레이  플렉스 까지만 하면 자동으로 디렉션이 로우로 돼있으니까
+    컬럼으로 바꾸어 y축으로 쌓이게 만든것 */
+}
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 55%;
+  opacity: 0.6;
+}
+/*.login-form__input{}
+  .login-form__btn{}*/
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  border: none;
+  padding: 15px 0px;
+  font-size: 18px;
+
+  margin-bottom: 20px;
+}
+#login-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  transition: border-color 0.5s ease-in-out;
+}
+/* 즉 아이디 로그인폼 아래에 있는 인풋의 타입이 서브밋이 아닐 때만 테두리가 생기고, 트랜지션 효과적용 */
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  /* 일부러 #login-form이라는 한정을 줘서 모든 input이 설정되지 않게 지정한것임 */
+}
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+#login-form input[type="submit"] {
+  background-color: var(--yellow);
+  cursor: pointer;
+  /* cursor: not-allowed;  이건 못누르게 하는거*/
+  /* 커서를 손모양으로 바꿔줌 */
+  font-size: 17px;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  /* 모든 링크는 파랑색으로 돼있음
+          a가 아버지로부터 색상을 받아옴. 디폴트는 블랙이다.
+        */
+  font-size: 13px;
+}

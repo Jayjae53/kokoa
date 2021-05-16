@@ -1,0 +1,228 @@
+#chat-screen {
+  background-color: #7abeee;
+  color: black;
+  height: 500vh;
+}
+
+#chat-screen .alt-header {
+  top: 0;
+
+  /*  원래라면 m.main-chat {
+  margin-top: 50px; 이거때문에 내려와야하지면 top으로 고정시켜줘서 안내려옴
+}
+*/
+  background-color: #7abeee;
+  /* 이렇게하면 알트헤더랑 내용이 만나면 색이 감춰짐 */
+  position: fixed;
+  /* 
+#############position:fixed하고 안깨지려면
+width:100% */
+  width: 100%;
+  box-sizing: border-box;
+  /* 이걸 사용하면 화면에 다보임 */
+}
+
+#chat-screen .status-bar {
+  z-index: 1;
+}
+@keyframes fadeInlf {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@keyframes fadeInrt {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  margin-top: 140px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* 픽스트가 되면 다른 레이어에존재하기 떄문에 글자들이 위에 올라가있음 */
+}
+.message-row {
+  animation: fadeInlf 0.5s linear;
+}
+.message-row--own {
+  animation: fadeInrt 0.5s linear;
+}
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  margin-right: 10px;
+}
+.message__author {
+  margin-bottom: 8px;
+  display: block;
+  /* author가 span이기 때문이다 */
+}
+.message__bubble {
+  background-color: white;
+  padding: 10px 13px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  /* 왼쪽오른쪽위의 테두리가 각짐 */
+  margin-right: 5px;
+  font-size: 18px;
+}
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+.message__time,
+.message__author {
+  opacity: 0.8;
+  font-size: 12px;
+}
+.message-row--own {
+  justify-content: flex-end;
+}
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  margin-left: 5px;
+}
+.message__info {
+}
+/*  
+.message-row--own .message__bubble {
+  order: 1;         이 방법도 좋지만 코드가 길어짐
+}
+.message-row--own .message__time {
+  order: 0;
+}*/
+/*  */
+.message-row--own .message__info {
+  /* 앞에 .message-row--own 이걸 붙히지 않으면 모든 메세지가 뒤집히기때문에
+  내가 보낸것만 */
+  flex-direction: row-reverse;
+}
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  /* 바닥으로 붙혀줌 */
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  /* 이거덕분에.reply:focus-within {
+  transform: translateY(80px); 이게 정상작동
+}
+ */
+}
+.reply i {
+  opacity: 0.6;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.reply input {
+  /* 인풋의 창은 height으로도 키울 수 있찌만 padding도 가능 */
+  padding: 8px;
+  /* height: 30px; */
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  /*  인풋창이 변화할 때 부여되는 효과. 이게
+  없으면 큰 문제가 생김 */
+}
+
+.reply__column:last-child > i,
+/* 라스트 차일드가 부모인 i를 찾아야함. 즉 button속에 있는 아이는 button이 부모임 */
+.reply button {
+  position: absolute;
+  right: -4px;
+  top: 2px;
+}
+.reply__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* opacity: 1; */
+  /* 여기에 오퍼서티 적용하면 화살표에만 타겟하는게 아니라 주변색이랑 
+  밸런스를 맞춰서 투명도를 조절하기 때문에 혼자 타겟하는 것보다 명확한 색이 나오지 않음
+  */
+}
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+  /* button이나 form에 radius를 줘서 동그랗게 예쁘게 만들었는데 이런 파란 테두리가 남을 때
+ */
+}
+.reply__column button i {
+  opacity: 1;
+}
+.reply .reply__column:first-child,
+.reply .fa-smile-beam,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+  /* 인풋창의 아이콘들이 오파서티를 적용 받을 때는 0.3초간 시간이 걸리게함 */
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-beam,
+.reply:focus-within button {
+  opacity: 0;
+  /* 내부에 어떤 element가 focus되어 있다면 이건 참이되고 리플라이콜롬의 첫번째아이, 스마일아이콘
+  버튼을 지정하고 사라지게 한다 +아이콘 */
+}
+.reply:focus-within input {
+  width: 90vw;
+  transform: translateX(-12%) translateY(-80px);
+
+  /* 리플라이에 포커스되면 인풋 이 width가 늘어나는데
+  T  transform: translateX(-10%);이게 없으면 왼쪽에 이미 자리가 있어서 뚫지못하고
+  막힘 따라서 저 코드를 작성하면 포커스됐을 때 왼쪽으로 강제적으로 이동시킬 수 있음
+  translateY(-80px);translateY(-80px);translateY(-80px);
+  이거 덕분에 리플라이창이 아래로 밀려날 때  인풋텍스트창만 버티고있음
+  */
+}
+.reply:focus-within {
+  transform: translateY(80px);
+  /* transition: all 0.3s ease-in-out; 여기 써도됨 */
+}
